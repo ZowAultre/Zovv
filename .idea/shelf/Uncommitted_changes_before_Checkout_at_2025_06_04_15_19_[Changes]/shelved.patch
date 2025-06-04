@@ -1,0 +1,35 @@
+Index: RunD.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import ollama\r\n\r\n\r\ndef chat_with_deepseek(messages, model_name=\"deepseek-r1:7b\"):\r\n    response = ollama.chat(\r\n        model=model_name,\r\n        messages=messages\r\n    )\r\n    return response[\"message\"][\"content\"]\r\n\r\ndef stream_response(prompt, model_name=\"deepseek-r1:7b\"):\r\n    stream = ollama.chat(\r\n        model=model_name,\r\n        messages=[{\"role\": \"user\", \"content\": prompt}],\r\n        stream=True  # 启用流式响应\r\n    )\r\n    print(\"[D7]: \", end=\"\", flush=True)\r\n    for chunk in stream:\r\n        print(chunk[\"message\"][\"content\"], end=\"\", flush=True)\r\n    print()\r\n\r\n# 初始化对话历史\r\nmessages = []\r\n\r\nwhile True:\r\n    user_input = input(\"[Q]: \").strip()\r\n    if user_input.lower() in (\"stop\", \"quit\", \"exit\"):\r\n        print(\"[D7]: 对话结束。\")\r\n        break\r\n\r\n    # 添加用户输入到历史\r\n    messages.append({\"role\": \"user\", \"content\": user_input})\r\n\r\n    # 获取模型回复并添加到历史\r\n    answer = chat_with_deepseek(messages)\r\n    messages.append({\"role\": \"assistant\", \"content\": answer})\r\n\r\n    print(\"[D7]:\", answer)\r\n\r\n# 这里可以接入TTS模型，例如edge-tts或vits\r\n# from TTS_module import text_to_speech\r\n# text_to_speech(answer)\r\n\r\n# 手动清除显存（强制释放）\r\n#     torch.cuda.empty_cache()  # 如果使用 PyTorch 后端\r\n
+===================================================================
+diff --git a/RunD.py b/RunD.py
+--- a/RunD.py	
++++ b/RunD.py	
+@@ -8,16 +8,16 @@
+     )
+     return response["message"]["content"]
+ 
+-def stream_response(prompt, model_name="deepseek-r1:7b"):
+-    stream = ollama.chat(
+-        model=model_name,
+-        messages=[{"role": "user", "content": prompt}],
+-        stream=True  # 启用流式响应
+-    )
+-    print("[D7]: ", end="", flush=True)
+-    for chunk in stream:
+-        print(chunk["message"]["content"], end="", flush=True)
+-    print()
++# def stream_response(prompt, model_name="deepseek-r1:7b"):
++#     stream = ollama.chat(
++#         model=model_name,
++#         messages=[{"role": "user", "content": prompt}],
++#         stream=True  # 启用流式响应
++#     )
++#     print("[D7]: ", end="", flush=True)
++#     for chunk in stream:
++#         print(chunk["message"]["content"], end="", flush=True)
++#     print()
+ 
+ # 初始化对话历史
+ messages = []

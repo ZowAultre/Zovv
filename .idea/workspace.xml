@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8764f86-197b-4891-80f8-f4fc84d6bbb9" name="Changes" comment="初始化Push" />
+    <list default="true" id="d8764f86-197b-4891-80f8-f4fc84d6bbb9" name="Changes" comment="TestCode">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCode/Ollama7b.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestCode/Ollama7b.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,10 +50,28 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "settings.editor.selected.configurable": "PyConsoleConfigurable.Python Console",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings sdk-home="P:\Fairy\Zovv\.venv\Scripts\python.exe">
+        <option name="sdk">
+          <Sdk />
+        </option>
+        <option name="mySdkHome" value="P:\Fairy\Zovv\.venv\Scripts\python.exe" />
+        <option name="mySdk">
+          <Sdk />
+        </option>
+      </console-settings>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="P:\Fairy\Zovv" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -68,7 +89,7 @@
       <updated>1748671203956</updated>
       <workItem from="1748671209106" duration="3075000" />
       <workItem from="1748699059184" duration="4675000" />
-      <workItem from="1749020989136" duration="1991000" />
+      <workItem from="1749020989136" duration="5820000" />
     </task>
     <task id="LOCAL-00001" summary="初始化Push">
       <option name="closed" value="true" />
@@ -94,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749022707105</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="TestCode">
+      <option name="closed" value="true" />
+      <created>1749023303695</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1749023303695</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +143,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="初始化Push" />
-    <option name="LAST_COMMIT_MESSAGE" value="初始化Push" />
+    <MESSAGE value="TestCode" />
+    <option name="LAST_COMMIT_MESSAGE" value="TestCode" />
   </component>
 </project>

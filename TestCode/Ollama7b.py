@@ -20,15 +20,17 @@ def stream_response(prompt, model_name="deepseek-r1:7b"):
     print()
 
 
-while True:
-    user_input = input("[Q]: ").strip()
-    if user_input.lower() in ("stop", "quit"):
-        break
-    stream_response(user_input)
+# while True:
+#     user_input = input("[Q]: ").strip()
+#     if user_input.lower() in ("stop", "quit"):
+#         break
+#     stream_response(user_input)
 
 
 # 初始化对话历史
 messages = []
+AiCharacterSetting = "请你将自己当成和我聊天的朋友，用简短的口语回应我。"
+messages.append({"role": "user", "content": AiCharacterSetting})
 
 while True:
     user_input = input("[Q]: ").strip()
